@@ -86,8 +86,8 @@ const year = new Date().getFullYear();
 				<div class="section-copy">
 					<h2 id="ways-title">Two ways to move forward.</h2>
 					<p><strong>Habits</strong> support the things worth repeating. <strong>Plans</strong> hold the things that need to move forward, one clear step at a time. Today shows what matters now instead of exposing another endless list.</p>
-					<img src="/images/ardu/habits-and-plans.png" alt="Ardu onboarding explaining Habits and Plans" loading="lazy" />
 				</div>
+				<figure class="ways-visual"><img src="/images/ardu/habits-and-plans.png" alt="Ardu onboarding explaining Habits and Plans" loading="lazy" /></figure>
 			</section>
 
 			<section class="privacy" aria-labelledby="privacy-title">
@@ -176,7 +176,8 @@ const year = new Date().getFullYear();
 	.feature-copy > p:last-child { max-width:35rem; font-size:1.05rem; line-height:1.6; color:rgba(255,255,255,.78); }
 	.feature figure { height:34rem; margin:3rem -1rem 0; overflow:hidden; }
 	.feature figure img { width:100%; height:100%; object-fit:cover; object-position:50% 32%; }
-	.two-ways .section-copy > img { margin-top:3rem; border-radius:1.5rem; }
+	.ways-visual { margin:3rem 0 0; overflow:hidden; border-radius:1.5rem; }
+	.ways-visual img { width:100%; }
 	.privacy { background:#101310; color:#f4f1e9; }
 	.privacy-inner { padding-block:5.5rem; }
 	.privacy .eyebrow { margin-bottom:1.5rem; color:#aeb0aa; }
@@ -214,14 +215,20 @@ const year = new Date().getFullYear();
 		.principle-list { display:grid; grid-template-columns:repeat(3,1fr); gap:2.5rem; margin-top:5rem; }
 		.principle-list article { min-height:17rem; display:flex; flex-direction:column; }
 		.principle-list p { margin-top:auto; }
-		.feature-inner { min-height:54rem; padding-top:0; display:grid; grid-template-columns:.8fr 1.2fr; gap:5rem; align-items:center; }
+		.feature-inner { min-height:54rem; padding-top:0; display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
 		.feature-small .feature-copy { order:2; }
 		.feature-copy > p:last-child { font-size:1.12rem; }
-		.feature figure { height:54rem; margin:0; overflow:visible; align-self:end; }
-		.feature figure img { width:100%; height:auto; max-height:none; object-fit:initial; }
-		.feature-capture figure img { transform:translateY(3.5rem); }
-		.feature-small figure img { transform:translateY(3.5rem); }
-		.two-ways .section-copy > img { border-radius:2rem; }
+		.feature figure { margin:0; overflow:hidden; align-self:center; justify-self:center; background:transparent; box-shadow:0 2rem 5rem rgba(0,0,0,.24); }
+		.feature figure img { max-width:none; height:auto; }
+		.feature-capture figure { width:22rem; height:46.1rem; border-radius:3.75rem; }
+		.feature-capture figure img { width:216%; transform:translate(-47.7%,-6.6rem); }
+		.feature-small figure { width:21.7rem; height:48.3rem; border-radius:3.75rem; }
+		.feature-small figure img { width:215%; transform:translate(-47.5%,-4.8rem); }
+		.two-ways { grid-template-rows:auto; align-items:center; }
+		.two-ways > .eyebrow { grid-column:1; grid-row:1; align-self:start; }
+		.two-ways .section-copy { grid-column:2; grid-row:1; align-self:center; }
+		.ways-visual { grid-column:1; grid-row:1; height:29rem; margin:4rem 0 0; border-radius:2rem; }
+		.ways-visual img { width:100%; height:100%; object-fit:cover; object-position:center bottom; }
 		.privacy-inner { display:grid; grid-template-columns:1fr 1fr; gap:5rem; padding-block:8rem; }
 		.privacy-copy { margin-top:0; }
 		.closing { padding-block:9rem; }
