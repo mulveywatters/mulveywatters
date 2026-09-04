@@ -33,10 +33,10 @@ const year = new Date().getFullYear();
 						</dl>
 					</div>
 					<div class="hero-visual">
-						<div class="screen-placeholder desktop-screen" role="img" aria-label="Placeholder for the Squashr tournament dashboard screenshot">
-							<div class="browser-bar"><span></span><span></span><span></span><small>Screenshot placeholder</small></div>
-							<div class="screen-body"><div class="mock-sidebar"><b>Squashr</b><i></i><i></i><i></i><i></i></div><div class="mock-main"><p>Tournament dashboard</p><strong>Division A</strong><div class="mock-stats"><i></i><i></i><i></i></div><div class="mock-table"><i></i><i></i><i></i><i></i></div></div></div>
-						</div>
+						<figure class="safari-frame hero-browser">
+							<div class="safari-toolbar" aria-hidden="true"><span>Safari</span><span>Squashr organiser dashboard</span></div>
+							<img src="/images/squashr/organiser-dashboard-desktop.jpg" alt="Squashr organiser dashboard showing tournament progress, players, matches and knockout completion" />
+						</figure>
 					</div>
 				</div>
 			</section>
@@ -69,10 +69,7 @@ const year = new Date().getFullYear();
 						<h2 id="draws-title">Draws that fit the field.</h2>
 						<p>Squashr supports round robins, seeded knockout draws, preliminary rounds, direct byes, Bronze matches and a separate Plate for eligible first-match losers.</p>
 					</div>
-					<div class="feature-frame" role="img" aria-label="Placeholder for a Squashr knockout draw screenshot">
-						<p>Screenshot placeholder · Knockout draw</p>
-						<div class="bracket"><div><i>1</i><i>8</i><i>4</i><i>5</i></div><div><i></i><i></i></div><div><i></i></div></div>
-					</div>
+					<figure class="iphone-frame match-browser-phone"><img src="/images/squashr/matches-mobile.jpg" alt="Squashr mobile match browser showing seeding pools and final divisions" /></figure>
 				</div>
 			</section>
 
@@ -83,9 +80,7 @@ const year = new Date().getFullYear();
 						<h2 id="live-title">The match, clearly in hand.</h2>
 						<p>The mobile scoring view keeps player names beside every score, makes the server unmistakable and preserves completed games and rally history as the match unfolds.</p>
 					</div>
-					<div class="phone-placeholder" role="img" aria-label="Placeholder for a Squashr mobile live-scoring screenshot">
-						<div class="phone-status">9:41 <span>● ● ●</span></div><small>Live scoring</small><h3>Division A · Semi Final</h3><div class="score"><div><small>Player A</small><b>11</b></div><div class="serving"><small>Player B · Serving</small><b>8</b></div></div><div class="game-row">Game 1 <span>11–7</span></div><div class="phone-actions"><i></i><i></i><i></i></div><p>Screenshot placeholder</p>
-					</div>
+					<figure class="iphone-frame live-scoring-phone"><img src="/images/squashr/live-scoring-mobile.jpg" alt="Squashr live scoring during a match, with player names, current score, server and completed game" /></figure>
 				</div>
 			</section>
 
@@ -94,7 +89,10 @@ const year = new Date().getFullYear();
 				<div class="section-copy">
 					<h2 id="public-title">A public view that stays current.</h2>
 					<p>Players and spectators can follow tournament information, draws, courts and live match summaries from a responsive public view. Direct links and QR access make it easy to open at the venue.</p>
-					<div class="wide-placeholder" role="img" aria-label="Placeholder for the Squashr public tournament view screenshot"><span>Screenshot placeholder</span><strong>Public tournament overview</strong><div><i></i><i></i><i></i></div></div>
+					<figure class="safari-frame public-browser">
+						<div class="safari-toolbar" aria-hidden="true"><span>Safari</span><span>Squashr public tournament view</span></div>
+						<img src="/images/squashr/public-overview-desktop.jpg" alt="Squashr public tournament overview showing tournament totals and recent championship results" />
+					</figure>
 				</div>
 			</section>
 
@@ -112,7 +110,7 @@ const year = new Date().getFullYear();
 			</section>
 
 			<section class="closing shell">
-				<div class="mini-mark" aria-hidden="true">S</div>
+				<img class="closing-logo" src="/images/squashr/squashr-logo-horizontal.svg" alt="Squashr" width="168" height="52" />
 				<p class="eyebrow">Currently in active development</p>
 				<h2>Less tournament admin.<br />More time for the squash.</h2>
 				<a href="mailto:hello@mulveywatters.ie?subject=Squashr">Ask me about Squashr <span aria-hidden="true">→</span></a>
@@ -151,21 +149,11 @@ const year = new Date().getFullYear();
 	.project-meta dt { color:rgba(255,255,255,.6); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; }
 	.project-meta dd { margin:0; font-size:.82rem; }
 	.hero-visual { height:27rem; margin:3rem -1rem 0; overflow:hidden; }
-	.screen-placeholder { color:#15221d; background:#f7f8f5; border:1px solid rgba(255,255,255,.45); box-shadow:0 2rem 6rem rgba(0,0,0,.26); }
-	.desktop-screen { width:43rem; height:28rem; margin-left:2rem; border-radius:1rem 0 0 0; overflow:hidden; }
-	.browser-bar { height:2.5rem; display:flex; align-items:center; gap:.4rem; padding:0 1rem; background:#e6ebe6; border-bottom:1px solid #cbd3cc; }
-	.browser-bar span { width:.55rem; height:.55rem; border-radius:50%; background:#aab6ad; }
-	.browser-bar small { margin-left:auto; color:#748078; }
-	.screen-body { height:calc(100% - 2.5rem); display:grid; grid-template-columns:7rem 1fr; }
-	.mock-sidebar { padding:1.5rem 1rem; background:#0a3829; color:white; }
-	.mock-sidebar b { display:block; margin-bottom:2rem; }
-	.mock-sidebar i { display:block; height:.45rem; margin:1.1rem 0; border-radius:1rem; background:rgba(255,255,255,.25); }
-	.mock-main { padding:1.6rem; }
-	.mock-main p { margin:0 0 1.2rem; color:#758078; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; }
-	.mock-main strong { font-size:1.4rem; }
-	.mock-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:.7rem; margin:1.5rem 0; }
-	.mock-stats i { height:4rem; border-radius:.5rem; background:#e4eee8; }
-	.mock-table i { display:block; height:2.5rem; border-top:1px solid #d9ded9; }
+	.safari-frame { margin:0; overflow:hidden; background:#111923; border:.32rem solid #d8d9db; border-radius:1.15rem; box-shadow:0 2rem 6rem rgba(0,0,0,.28); }
+	.safari-toolbar { height:2.65rem; display:grid; grid-template-columns:auto 1fr; align-items:center; gap:1rem; padding:0 .9rem; color:#394047; background:#ececee; border-bottom:1px solid #c8c9cb; font-size:.64rem; font-weight:600; }
+	.safari-toolbar span:last-child { min-width:0; padding:.48rem .85rem; overflow:hidden; color:#62676c; background:#fff; border:1px solid #d2d3d5; border-radius:.55rem; text-align:center; text-overflow:ellipsis; white-space:nowrap; }
+	.safari-frame img { display:block; width:100%; height:auto; }
+	.hero-browser { width:43rem; margin-left:2rem; }
 	.section-grid { padding-block:5.5rem; }
 	.section-grid > .eyebrow, .principles .eyebrow { margin-bottom:1.5rem; color:var(--muted); }
 	.section-copy h2, .principles h2, .feature h2, .platform h2, .closing h2 { margin:0; font-size:clamp(3.2rem,11vw,5.5rem); line-height:.92; letter-spacing:-.03em; }
@@ -184,29 +172,11 @@ const year = new Date().getFullYear();
 	.feature-copy .eyebrow { margin-bottom:1.5rem; color:rgba(255,255,255,.62); }
 	.feature h2 { max-width:8em; }
 	.feature-copy > p:last-child { max-width:35rem; font-size:1.05rem; line-height:1.6; color:rgba(255,255,255,.78); }
-	.feature-frame { min-width:42rem; height:27rem; margin:3rem 0 0 2rem; padding:1.4rem; color:#13251f; background:#f4f5f2; border-radius:1rem 0 0 1rem; box-shadow:0 2rem 5rem rgba(0,0,0,.26); }
-	.feature-frame > p { margin:0 0 2rem; color:#78827c; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; }
-	.bracket { display:grid; grid-template-columns:repeat(3,9rem); gap:2.5rem; align-items:center; }
-	.bracket div { display:grid; gap:1.2rem; }
-	.bracket i { display:block; height:2.4rem; padding:.65rem; border:1px solid #cbd5ce; border-radius:.4rem; font-style:normal; background:white; }
-	.phone-placeholder { width:19rem; min-height:35rem; margin:3rem auto -4.5rem; padding:1.3rem; color:#eaf2ed; background:#071711; border:.45rem solid #18251f; border-radius:2.8rem 2.8rem 0 0; box-shadow:0 2rem 5rem rgba(0,0,0,.3); }
-	.phone-status { display:flex; justify-content:space-between; font-size:.72rem; }
-	.phone-placeholder > small { display:block; margin-top:2.8rem; color:#72d8a8; letter-spacing:.12em; text-transform:uppercase; }
-	.phone-placeholder h3 { margin:1rem 0; font-family:'DM Sans',sans-serif; font-size:1.2rem; font-weight:600; }
-	.score { display:grid; grid-template-columns:1fr 1fr; gap:.7rem; margin-top:1.5rem; }
-	.score div { padding:1rem; border:1px solid #3e5c50; border-radius:.8rem; }
-	.score .serving { border-color:#d6bd55; }
-	.score small { color:#aebdb5; }
-	.score b { display:block; margin-top:.7rem; font-size:4.5rem; }
-	.game-row { display:flex; justify-content:space-between; margin-top:1rem; padding:1rem; background:#153b2e; border-radius:.7rem; }
-	.phone-actions { display:grid; grid-template-columns:repeat(3,1fr); gap:.5rem; margin-top:1rem; }
-	.phone-actions i { height:3rem; border:1px solid #3e5c50; border-radius:.6rem; }
-	.phone-placeholder > p { margin-top:1.5rem; color:#71857a; text-align:center; font-size:.7rem; text-transform:uppercase; letter-spacing:.08em; }
-	.wide-placeholder { width:100%; min-width:0; height:25rem; margin:3rem 0 0; padding:2rem; color:#17342a; background:var(--mint); border-radius:1rem; overflow:hidden; }
-	.wide-placeholder span { display:block; color:#6f8378; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; }
-	.wide-placeholder strong { display:block; margin-top:2rem; font-size:1.7rem; }
-	.wide-placeholder div { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:2rem; }
-	.wide-placeholder i { height:14rem; border-radius:.7rem; background:white; box-shadow:0 .8rem 2rem rgba(6,76,52,.08); }
+	.iphone-frame { margin:3rem auto -4.5rem; overflow:hidden; background:#050607; border:.62rem solid #090a0b; border-radius:3.45rem 3.45rem 0 0; box-shadow:0 2rem 5rem rgba(0,0,0,.34), inset 0 0 0 1px #4a4d50; }
+	.iphone-frame img { display:block; width:100%; height:auto; }
+	.match-browser-phone { width:19rem; max-height:36rem; }
+	.live-scoring-phone { width:19rem; max-height:39rem; }
+	.public-browser { width:100%; margin-top:3rem; }
 	.platform { color:#f3f0e8; background:#101310; }
 	.platform-inner { padding-block:5.5rem; }
 	.platform .eyebrow { margin-bottom:1.5rem; color:#aeb0aa; }
@@ -216,7 +186,7 @@ const year = new Date().getFullYear();
 	.platform-copy ul { list-style:none; margin:2rem 0 0; padding:0; border-top:1px solid #555a53; }
 	.platform-copy li { padding:1rem 0; border-bottom:1px solid #555a53; }
 	.closing { padding-block:6rem; }
-	.mini-mark { display:grid; place-items:center; width:4.5rem; height:4.5rem; margin-bottom:3rem; color:#fff; background:var(--green); border-radius:1rem; font-family:'Instrument Serif',serif; font-size:2.8rem; box-shadow:0 .8rem 2rem rgba(0,0,0,.14); }
+	.closing-logo { display:block; width:10.5rem; height:auto; margin-bottom:3rem; }
 	.closing .eyebrow { margin-bottom:1.5rem; color:var(--muted); }
 	.closing h2 { max-width:12em; }
 	.closing > a { display:inline-block; margin-top:2.5rem; padding-bottom:.3rem; border-bottom:1px solid currentColor; font-weight:500; }
@@ -234,7 +204,7 @@ const year = new Date().getFullYear();
 		.project-meta div { display:block; }
 		.project-meta dd { margin-top:.55rem; }
 		.hero-visual { align-self:end; height:40rem; margin:0; overflow:visible; }
-		.desktop-screen { margin-top:6rem; margin-left:0; }
+		.hero-browser { margin-top:6rem; margin-left:0; }
 		.section-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; padding-block:8rem; overflow:hidden; }
 		.section-grid > .eyebrow { margin-top:.45rem; }
 		.section-copy { grid-column:2; }
@@ -246,11 +216,10 @@ const year = new Date().getFullYear();
 		.feature-inner { min-height:54rem; padding:0; display:grid; grid-template-columns:.8fr 1.2fr; gap:5rem; align-items:center; }
 		.feature-live .feature-copy { order:2; }
 		.feature-copy > p:last-child { font-size:1.12rem; }
-		.feature-frame { margin:0; }
-		.phone-placeholder { align-self:end; width:25rem; min-height:46rem; margin:5rem auto -5rem; padding:1.7rem; }
-		.phone-placeholder h3 { font-size:1.5rem; }
-		.score b { font-size:6.5rem; }
-		.wide-placeholder { margin-top:3.5rem; }
+		.iphone-frame { align-self:end; width:24rem; margin:4rem auto -5rem; }
+		.match-browser-phone { max-height:49rem; }
+		.live-scoring-phone { max-height:50rem; }
+		.public-browser { margin-top:3.5rem; }
 		.platform-inner { display:grid; grid-template-columns:1fr 1fr; gap:5rem; padding-block:8rem; }
 		.platform-copy { margin-top:0; }
 		.closing { padding-block:9rem; }
