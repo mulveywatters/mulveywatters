@@ -1,0 +1,237 @@
+---
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Ardu is a private, forgiving iPhone app for building habits, moving plans forward and returning gently after a break." />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Ardu — Steven Mulvey Watters</title>
+	</head>
+	<body>
+		<header class="site-header shell">
+			<a class="wordmark" href="/">Steven Mulvey Watters</a>
+			<nav aria-label="Primary navigation"><a href="/#work">Work</a><a href="/#about">About</a></nav>
+		</header>
+
+		<main>
+			<section class="case-hero">
+				<div class="case-hero-inner shell">
+					<div class="hero-copy">
+						<p class="eyebrow">Ardu · iPhone app</p>
+						<h1>Protect momentum,<br /><em>not perfection.</em></h1>
+						<p class="lede">A calm, privacy-first app that helps people start, continue and return—without broken streaks or an intimidating backlog.</p>
+						<dl class="project-meta">
+							<div><dt>Role</dt><dd>Product design & development</dd></div>
+							<div><dt>Built with</dt><dd>SwiftUI · SwiftData · iCloud</dd></div>
+							<div><dt>Status</dt><dd>In private beta</dd></div>
+						</dl>
+					</div>
+					<div class="hero-phone" aria-hidden="true">
+						<img src="/images/ardu-today.png" alt="" />
+					</div>
+				</div>
+			</section>
+
+			<section class="manifesto shell section-grid" aria-labelledby="return-title">
+				<p class="eyebrow">The idea</p>
+				<div class="section-copy">
+					<h2 id="return-title">Built for the return, not the streak.</h2>
+					<p>Most productivity tools work best when life is already going smoothly. Miss a few days and the rewards disappear, reminders pile up, and returning feels like another job.</p>
+					<p>Ardu starts from a different premise: energy changes, routines break and coming back is progress. It keeps the next useful action clear while holding everything else safely out of the way.</p>
+				</div>
+			</section>
+
+			<section class="principles" aria-labelledby="principles-title">
+				<div class="shell">
+					<p class="eyebrow">Product principles</p>
+					<h2 id="principles-title">Less friction between intention and action.</h2>
+					<div class="principle-list">
+						<article><span>01</span><h3>One next step</h3><p>Turn an overwhelming intention into one clear action that can be started now.</p></article>
+						<article><span>02</span><h3>Smaller still counts</h3><p>Choose a Minimum version on lower-energy days without framing it as failure.</p></article>
+						<article><span>03</span><h3>Nothing is broken</h3><p>Return after days or weeks without overdue piles, lost progress or judgement.</p></article>
+					</div>
+				</div>
+			</section>
+
+			<section class="feature feature-capture" aria-labelledby="capture-title">
+				<div class="feature-inner shell">
+					<div class="feature-copy">
+						<p class="eyebrow">Start naturally</p>
+						<h2 id="capture-title">Begin with the messy thought.</h2>
+						<p>Quick Capture accepts the responsibility as it exists in your head. Ardu helps shape it into a Habit or Plan, but nothing is created until you review it.</p>
+					</div>
+					<figure><img src="/images/ardu/quick-capture.png" alt="Ardu Quick Capture screen turning an unstructured thought into a Habit or Plan" loading="lazy" /></figure>
+				</div>
+			</section>
+
+			<section class="feature feature-small" aria-labelledby="small-title">
+				<div class="feature-inner shell">
+					<div class="feature-copy">
+						<p class="eyebrow">Flexible progress</p>
+						<h2 id="small-title">Make the action fit the day.</h2>
+						<p>Habits can have Full and Minimum versions. Plans move forward one achievable step at a time. The goal is useful movement—not maintaining a perfect record.</p>
+					</div>
+					<figure><img src="/images/ardu/smaller-still-counts.png" alt="Ardu habit check-in offering Full, Minimum and Skip options" loading="lazy" /></figure>
+				</div>
+			</section>
+
+			<section class="two-ways shell section-grid" aria-labelledby="ways-title">
+				<p class="eyebrow">A small system</p>
+				<div class="section-copy">
+					<h2 id="ways-title">Two ways to move forward.</h2>
+					<p><strong>Habits</strong> support the things worth repeating. <strong>Plans</strong> hold the things that need to move forward, one clear step at a time. Today shows what matters now instead of exposing another endless list.</p>
+					<img src="/images/ardu/habits-and-plans.png" alt="Ardu onboarding explaining Habits and Plans" loading="lazy" />
+				</div>
+			</section>
+
+			<section class="privacy" aria-labelledby="privacy-title">
+				<div class="shell privacy-inner">
+					<div>
+						<p class="eyebrow">Privacy by design</p>
+						<h2 id="privacy-title">Personal data stays personal.</h2>
+					</div>
+					<div class="privacy-copy">
+						<p>Ardu needs no Ardu account. Habits, Plans, schedules and history live in private app storage and can sync through the user’s own iCloud account.</p>
+						<ul>
+							<li>No advertising profile or social network</li>
+							<li>Optional, read-only Apple Health access</li>
+							<li>On-device intelligence with a local fallback</li>
+							<li>Explicit review before generated work is saved</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="closing shell">
+				<img class="app-icon" src="/images/ardu/app-icon.png" alt="Ardu app icon" loading="lazy" />
+				<p class="eyebrow">Currently in private beta</p>
+				<h2>Useful when you begin.<br />Still useful when you come back.</h2>
+				<a href="mailto:hello@mulveywatters.ie?subject=Ardu">Ask me about Ardu <span aria-hidden="true">→</span></a>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="shell footer-inner">
+				<a class="back-link" href="/">← Back to selected work</a>
+				<div class="footer-meta"><a href="mailto:hello@mulveywatters.ie">hello@mulveywatters.ie</a><span>Dublin, Ireland</span><span>© {year} Steven Mulvey Watters</span></div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+	:root { --paper:#f3f0e8; --ink:#11120f; --muted:#626159; --blue:#0868d7; --night:#071126; --rule:rgba(17,18,15,.22); font-family:'DM Sans',system-ui,sans-serif; color:var(--ink); background:var(--paper); font-synthesis:none; }
+	* { box-sizing:border-box; }
+	html { scroll-behavior:smooth; }
+	body { margin:0; background:var(--paper); }
+	a { color:inherit; text-decoration:none; transition:opacity .2s ease; }
+	a:hover { opacity:.68; }
+	a:focus-visible { outline:2px solid currentColor; outline-offset:5px; }
+	img { display:block; max-width:100%; }
+	.shell { width:min(100% - 2rem,1180px); margin-inline:auto; }
+	.site-header { display:flex; align-items:center; justify-content:space-between; padding-block:1.35rem; border-bottom:1px solid var(--rule); }
+	.wordmark, nav a, .eyebrow { font-size:.72rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+	nav { display:flex; gap:1.25rem; }
+	nav a { letter-spacing:.04em; text-transform:none; }
+	h1, h2, h3 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; }
+	.eyebrow { margin:0; }
+	.case-hero { color:#fff; background:var(--blue); overflow:hidden; }
+	.case-hero-inner { min-height:50rem; padding-top:4.5rem; display:flex; flex-direction:column; }
+	.hero-copy { position:relative; z-index:2; }
+	.hero-copy .eyebrow { margin-bottom:2rem; }
+	h1 { max-width:9em; margin:0; font-size:clamp(4.2rem,17vw,7.6rem); line-height:.84; letter-spacing:-.045em; }
+	h1 em { font-weight:400; }
+	.lede { max-width:35rem; margin:2rem 0 0; font-size:1.08rem; line-height:1.55; color:rgba(255,255,255,.88); }
+	.project-meta { display:grid; gap:1rem; margin:2.25rem 0 0; padding-top:1.25rem; border-top:1px solid rgba(255,255,255,.45); }
+	.project-meta div { display:grid; grid-template-columns:5rem 1fr; gap:1rem; }
+	.project-meta dt { color:rgba(255,255,255,.62); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; }
+	.project-meta dd { margin:0; font-size:.82rem; }
+	.hero-phone { position:relative; height:29rem; margin:3rem -1rem 0; overflow:hidden; }
+	.hero-phone img { position:absolute; top:0; right:-1rem; width:20rem; max-width:none; border-radius:2.3rem 2.3rem 0 0; box-shadow:0 2rem 6rem rgba(0,0,0,.3); }
+	.section-grid { padding-block:5.5rem; }
+	.section-grid > .eyebrow, .principles .eyebrow { margin-bottom:1.5rem; color:var(--muted); }
+	.section-copy h2, .principles h2, .feature h2, .privacy h2, .closing h2 { margin:0; font-size:clamp(3.2rem,11vw,5.5rem); line-height:.92; letter-spacing:-.03em; }
+	.section-copy > p { max-width:43rem; font-size:1.05rem; line-height:1.65; }
+	.principles { padding-block:5.5rem; border-block:1px solid var(--rule); }
+	.principles h2 { max-width:10em; }
+	.principle-list { margin-top:3.5rem; }
+	.principle-list article { padding-block:1.75rem; border-top:1px solid var(--rule); }
+	.principle-list span { color:var(--muted); font-size:.72rem; }
+	.principle-list h3 { margin:.8rem 0 .5rem; font-size:2.1rem; }
+	.principle-list p { max-width:30rem; margin:0; line-height:1.55; color:var(--muted); }
+	.feature { color:#fff; overflow:hidden; }
+	.feature-capture { background:var(--night); }
+	.feature-small { background:#14215b; }
+	.feature-inner { padding-top:4.5rem; }
+	.feature-copy { position:relative; z-index:2; }
+	.feature-copy .eyebrow { margin-bottom:1.5rem; color:rgba(255,255,255,.65); }
+	.feature h2 { max-width:8em; }
+	.feature-copy > p:last-child { max-width:35rem; font-size:1.05rem; line-height:1.6; color:rgba(255,255,255,.78); }
+	.feature figure { height:34rem; margin:3rem -1rem 0; overflow:hidden; }
+	.feature figure img { width:100%; height:100%; object-fit:cover; object-position:50% 32%; }
+	.two-ways .section-copy > img { margin-top:3rem; border-radius:1.5rem; }
+	.privacy { background:#101310; color:#f4f1e9; }
+	.privacy-inner { padding-block:5.5rem; }
+	.privacy .eyebrow { margin-bottom:1.5rem; color:#aeb0aa; }
+	.privacy h2 { max-width:8em; }
+	.privacy-copy { margin-top:3rem; }
+	.privacy-copy > p { max-width:38rem; font-size:1.08rem; line-height:1.65; color:#c7cac3; }
+	.privacy-copy ul { list-style:none; margin:2rem 0 0; padding:0; border-top:1px solid #555a53; }
+	.privacy-copy li { padding:1rem 0; border-bottom:1px solid #555a53; }
+	.closing { padding-block:6rem; }
+	.app-icon { width:4.5rem; margin-bottom:3rem; border-radius:1rem; box-shadow:0 .8rem 2rem rgba(0,0,0,.14); }
+	.closing .eyebrow { margin-bottom:1.5rem; color:var(--muted); }
+	.closing h2 { max-width:12em; }
+	.closing > a { display:inline-block; margin-top:2.5rem; padding-bottom:.3rem; border-bottom:1px solid currentColor; font-weight:500; }
+	.footer { background:#101310; color:#f4f1e9; }
+	.footer-inner { padding-block:3rem 2rem; }
+	.back-link { display:inline-block; padding-bottom:.25rem; border-bottom:1px solid #777b74; }
+	.footer-meta { display:grid; gap:.7rem; margin-top:4rem; color:#bdc0b9; font-size:.78rem; }
+	@media (min-width:960px) {
+		.shell { width:min(100% - 5rem,1180px); }
+		.site-header { padding-block:1.7rem; }
+		.case-hero-inner { min-height:52rem; padding-top:7rem; display:grid; grid-template-columns:1.03fr .97fr; gap:5rem; }
+		h1 { font-size:clamp(6rem,8.2vw,8.8rem); }
+		.lede { font-size:1.2rem; }
+		.project-meta { max-width:36rem; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+		.project-meta div { display:block; }
+		.project-meta dd { margin-top:.55rem; }
+		.hero-phone { align-self:end; height:45rem; margin:0; overflow:visible; }
+		.hero-phone img { top:0; right:5%; width:28rem; }
+		.section-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; padding-block:8rem; }
+		.section-grid > .eyebrow { margin-top:.45rem; }
+		.section-copy { grid-column:2; }
+		.section-copy h2, .principles h2, .feature h2, .privacy h2, .closing h2 { font-size:clamp(4.7rem,6.2vw,6.8rem); }
+		.principles { padding-block:8rem; }
+		.principles h2 { max-width:9em; }
+		.principle-list { display:grid; grid-template-columns:repeat(3,1fr); gap:2.5rem; margin-top:5rem; }
+		.principle-list article { min-height:17rem; display:flex; flex-direction:column; }
+		.principle-list p { margin-top:auto; }
+		.feature-inner { min-height:54rem; padding-top:0; display:grid; grid-template-columns:.8fr 1.2fr; gap:5rem; align-items:center; }
+		.feature-small .feature-copy { order:2; }
+		.feature-copy > p:last-child { font-size:1.12rem; }
+		.feature figure { height:54rem; margin:0; overflow:visible; align-self:end; }
+		.feature figure img { width:100%; height:auto; max-height:none; object-fit:initial; }
+		.feature-capture figure img { transform:translateY(3.5rem); }
+		.feature-small figure img { transform:translateY(3.5rem); }
+		.two-ways .section-copy > img { border-radius:2rem; }
+		.privacy-inner { display:grid; grid-template-columns:1fr 1fr; gap:5rem; padding-block:8rem; }
+		.privacy-copy { margin-top:0; }
+		.closing { padding-block:9rem; }
+		.footer-inner { padding-block:4rem 2.5rem; }
+		.footer-meta { grid-template-columns:1fr 1fr auto; }
+	}
+	@media (prefers-reduced-motion:no-preference) {
+		@keyframes reveal { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+		.hero-copy > *, .hero-phone { animation:reveal .65s ease both; }
+		.hero-phone { animation-delay:.12s; }
+	}
+	@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+</style>
