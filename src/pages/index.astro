@@ -16,7 +16,7 @@ const year = new Date().getFullYear();
 	<body>
 		<header class="site-header shell">
 			<a class="wordmark" href="#top" aria-label="Steven Mulvey Watters, home">Steven Mulvey Watters</a>
-			<nav aria-label="Primary navigation"><a href="#work">Work</a><a href="#about">About</a></nav>
+			<nav aria-label="Primary navigation"><a href="#work">Work</a><a href="/about/">About</a></nav>
 		</header>
 
 		<main id="top">
@@ -65,6 +65,7 @@ const year = new Date().getFullYear();
 					<h2 id="about-title">Useful technology should feel human.</h2>
 					<p>I’m Steven, a Configuration Analyst and independent developer based in Dublin. I enjoy solving practical problems, making complicated systems calmer and learning by building.</p>
 					<p>Away from the keyboard, you’ll usually find me running, playing squash or disappearing down an entirely unnecessary technology rabbit hole.</p>
+					<a class="about-link" href="/about/">More about me <span aria-hidden="true">→</span></a>
 				</div>
 			</section>
 		</main>
@@ -120,6 +121,7 @@ const year = new Date().getFullYear();
 	.about .eyebrow { margin:0 0 1.2rem; color:var(--muted); }
 	.about h2 { margin:0 0 1.4rem; max-width:11em; font-size:2.65rem; line-height:.98; }
 	.about-copy > p:not(.eyebrow) { max-width:39rem; line-height:1.6; }
+	.about-link { display:inline-block; margin-top:1.4rem; padding-bottom:.28rem; border-bottom:1px solid currentColor; font-weight:500; }
 	.footer { background:#101310; color:#f5f1e8; }
 	.footer-inner { padding-block:4rem 2rem; }
 	.footer .eyebrow { margin:0 0 2rem; color:#abaea7; }

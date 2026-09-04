@@ -1,53 +1,57 @@
-# Squashr screenshot integration QA
+# About page design QA
 
 ## Comparison target
 
-- source visual truth paths:
-  - `/tmp/codex-remote-attachments/01a06833-7768-72b2-8ec7-6fde2b4385d3/BDDEB51D-A113-48FF-91CA-1E2771B96567/1-Photo-1.jpg`
-  - `/tmp/codex-remote-attachments/01a06833-7768-72b2-8ec7-6fde2b4385d3/BDDEB51D-A113-48FF-91CA-1E2771B96567/2-Photo-2.jpg`
-  - `/tmp/codex-remote-attachments/01a06833-7768-72b2-8ec7-6fde2b4385d3/BDDEB51D-A113-48FF-91CA-1E2771B96567/3-Photo-3.jpg`
-  - `/tmp/codex-remote-attachments/01a06833-7768-72b2-8ec7-6fde2b4385d3/BDDEB51D-A113-48FF-91CA-1E2771B96567/4-Photo-4.jpg`
+- source visual truth path: `/Users/stevenmulveywatters/Documents/Codex/2026-09-03/referenced-chatgpt-conversation-this-is-an/outputs/about-reference-homepage.jpg`
 - implementation screenshot paths:
-  - `/Users/stevenmulveywatters/Documents/Codex/2026-09-03/referenced-chatgpt-conversation-this-is-an/outputs/squashr-page-desktop.jpg`
-  - `/Users/stevenmulveywatters/Documents/Codex/2026-09-03/referenced-chatgpt-conversation-this-is-an/outputs/squashr-page-mobile.jpg`
-- route: `http://127.0.0.1:4331/work/squashr/`
-- state: fully loaded, default theme, page at initial state
+  - `/Users/stevenmulveywatters/Documents/Codex/2026-09-03/referenced-chatgpt-conversation-this-is-an/outputs/about-page-desktop.jpg`
+  - `/Users/stevenmulveywatters/Documents/Codex/2026-09-03/referenced-chatgpt-conversation-this-is-an/outputs/about-page-mobile.jpg`
+- route: `http://127.0.0.1:4331/about/`
+- state: fully loaded, default theme, initial page state
 
 ## Dimensions and normalization
 
-- desktop implementation viewport and pixels: 1440 x 1000 CSS px, full-page capture 1440 x 6486 px, device scale factor 1
-- mobile implementation viewport and pixels: 390 x 844 CSS px, full-page capture 390 x 6932 px, device scale factor 1
-- source pixels: matches mobile 390 x 798; organiser dashboard 1280 x 819; public overview 1280 x 860; live scoring 590 x 1280
-- normalization: source images retain their native aspect ratios. The implementation scales them proportionally inside CSS-only Safari and iPhone bezels without stretching or destructive crop.
+- source homepage: 1440 x 3380 pixels at a 1440 x 1000 CSS viewport, device scale factor 1
+- desktop implementation: 1440 x 4420 pixels at a 1440 x 1000 CSS viewport, device scale factor 1
+- mobile implementation: 390 x 4351 pixels at a 390 x 844 CSS viewport, device scale factor 1
+- normalization: source and desktop implementation were captured at identical width and density. Mobile was evaluated as the responsive derivative of the same design system rather than scaled against the desktop source.
 
 ## Full-view comparison evidence
 
-The four source images and both implementation captures were opened together for direct comparison. Desktop preserves the editorial two-column rhythm while making each real product screen legible. Mobile collapses cleanly to one column, keeps both phone views centred, and has a measured document width of 390 px at a 390 px viewport.
+The source homepage and both About page captures were opened together for direct comparison. The About page retains the source's warm paper background, black editorial footer, Instrument Serif display hierarchy, DM Sans body typography, narrow rules, strong full-width colour sections and asymmetric desktop grid. Its additional pale green and Squashr green chapters extend the established palette without introducing a new visual language.
 
 ## Focused region comparison evidence
 
-Each source screenshot was reviewed at native resolution against its corresponding visible frame in the desktop and mobile captures. Separate element screenshots were not required because the original assets are embedded without internal crop or alteration; the visible QA question was the surrounding frame, scale, and section placement. The Safari chrome remains subordinate to the UI, while the iPhone bezel gives the mobile screens a clear device silhouette.
+Focused visual inspection covered the shared header, headline scale and wrapping, eyebrow labels, rule treatment, dark principle section and contact footer. Separate image-asset inspection was not needed because this is intentionally a text-led page and no source imagery, logos or icons are being recreated.
 
 ## Required fidelity surfaces
 
-- fonts and typography: existing portfolio display and body type are unchanged; screenshot UI text remains raster-faithful to the supplied source and is not duplicated in adjacent headings.
-- spacing and layout rhythm: framed screens align to the established section grid, maintain proportional margins, and stack without horizontal overflow at 390 px.
-- colors and visual tokens: existing neutral, deep green, and off-white portfolio palette is preserved; neutral device chrome does not compete with the screenshots.
-- image quality and asset fidelity: all four supplied real screenshots are used at their native aspect ratios with no placeholders, fabricated UI, or stretching.
-- copy and content: the surrounding narrative remains concise and describes the organiser, match-browser, live-scoring, and public-view screens shown.
+- fonts and typography: matches the existing Instrument Serif and DM Sans pairing, weight hierarchy, tight display leading, restrained uppercase labels and readable body measure.
+- spacing and layout rhythm: desktop uses the established 1180 px shell and two-column offsets; mobile collapses to a clear linear reading order with consistent section padding and no horizontal overflow.
+- colors and visual tokens: reuses the existing paper, ink, muted, deep black and Squashr green tokens; pale green provides a quiet intermediate chapter with sufficient contrast.
+- image quality and asset fidelity: no imagery is required or substituted. No placeholder imagery, emoji, CSS art or fabricated icons are present.
+- copy and content: expands only on established facts and themes: Configuration Analyst work, independent development, Ardu, Squashr, Dublin, running, squash and technology projects.
+
+## Interaction and accessibility checks
+
+- primary navigation tested from About to the homepage Work anchor and back to About
+- Ardu, Squashr and email links resolve to the intended routes or mail action
+- current-page navigation is marked with `aria-current="page"`
+- semantic section headings and labelled navigation are present
+- reduced-motion preference disables the entrance animation
+- browser console: no errors or warnings
+- mobile document width: 390 px at a 390 px viewport
 
 ## Findings
 
-No actionable P0, P1, or P2 differences remain. Browser console reported no errors or warnings, the mobile page has zero horizontal overflow, and the Astro production build completes successfully.
+No actionable P0, P1 or P2 differences remain. The new page is visually consistent with the selected homepage reference while appropriately expanding its concise About section into a longer editorial narrative.
 
 ## Comparison history
 
-1. Initial rendered comparison found a P2 presentation issue: deferred image loading left the phone and public-view frames empty in a full-page capture.
-2. Fix made: removed lazy loading from the three below-the-fold product screenshots so their framed content is deterministic in review captures and normal browsing.
-3. Post-fix evidence: revised desktop and mobile captures show all four supplied screenshots, with Safari frames on the two desktop views and iPhone frames on the two mobile views.
+The first comparison found no actionable P0, P1 or P2 issues, so no visual-fix iteration was required.
 
 ## Follow-up polish
 
-No blocking polish items. The frames can be tuned further later if the page's overall density changes.
+- P3: a personal photograph could be introduced later if a suitable source image becomes available, but the current text-led composition is complete without one.
 
 final result: passed
