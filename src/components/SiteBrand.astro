@@ -1,0 +1,46 @@
+---
+interface Props {
+	href?: string;
+}
+
+const { href = '/' } = Astro.props;
+---
+
+<a class="wordmark" href={href} aria-label="Steven Mulvey Watters, home">
+	<img src="/images/brand/mw-monogram-green.png" alt="" width="2000" height="1200" />
+	<span>Steven Mulvey Watters</span>
+</a>
+
+<style>
+	.wordmark {
+		display: inline-flex;
+		align-items: center;
+		gap: .7rem;
+		min-width: 0;
+	}
+
+	.wordmark img {
+		width: 2.6rem;
+		height: auto;
+		flex: 0 0 auto;
+	}
+
+	.wordmark span {
+		white-space: nowrap;
+	}
+
+	@media (max-width: 420px) {
+		.wordmark {
+			gap: .55rem;
+		}
+
+		.wordmark img {
+			width: 2.25rem;
+		}
+
+		.wordmark span {
+			font-size: .65rem;
+			letter-spacing: .08em;
+		}
+	}
+</style>

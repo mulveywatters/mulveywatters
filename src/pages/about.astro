@@ -1,0 +1,178 @@
+---
+import SiteHead from '../components/SiteHead.astro';
+import SiteBrand from '../components/SiteBrand.astro';
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<SiteHead title="About — Steven Mulvey Watters" description="About Steven Mulvey Watters, a Configuration Analyst and independent developer in Dublin." path="/about/" />
+	</head>
+	<body>
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+		<header class="site-header shell">
+			<SiteBrand />
+			<nav aria-label="Primary navigation"><a href="/#work">Work</a><a href="/about/" aria-current="page">About</a></nav>
+		</header>
+
+		<main id="main-content">
+			<section class="about-hero shell" aria-labelledby="about-title">
+				<p class="eyebrow">About · Dublin</p>
+				<h1 id="about-title">Useful technology<br />should feel <em>human.</em></h1>
+				<div class="hero-intro">
+					<p>I’m Steven, a Configuration Analyst and independent developer. I like practical problems, thoughtful details and software that makes complicated things feel calmer.</p>
+					<a class="text-link" href="mailto:hello@mulveywatters.ie">Say hello <span aria-hidden="true">→</span></a>
+				</div>
+			</section>
+
+			<section class="work-story" aria-labelledby="work-story-title">
+				<div class="shell story-grid">
+					<p class="eyebrow">The work</p>
+					<div class="story-copy">
+						<h2 id="work-story-title">Two sides of the same curiosity.</h2>
+						<div class="story-pair">
+							<article>
+								<p class="number">01</p>
+								<h3>Making systems calmer.</h3>
+								<p>My day-to-day work as a Configuration Analyst is about understanding how systems fit together, finding the friction and making reliable changes without losing sight of the people using them.</p>
+							</article>
+							<article>
+								<p class="number">02</p>
+								<h3>Learning by building.</h3>
+								<p>Independent projects give me space to follow an idea all the way through. Ardu explores gentler ways to make progress; Squashr turns the moving parts of a club tournament into one practical workflow.</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="principles" aria-labelledby="principles-title">
+				<div class="shell">
+					<p class="eyebrow">How I work</p>
+					<h2 id="principles-title">Useful before impressive.</h2>
+					<div class="principle-list">
+						<article><span>01</span><h3>Start with the real problem</h3><p>The clearest solution usually appears after understanding the awkward details, constraints and people around it.</p></article>
+						<article><span>02</span><h3>Keep the experience calm</h3><p>Good software should explain itself, respect attention and help people recover when things do not go perfectly.</p></article>
+						<article><span>03</span><h3>Make, test and refine</h3><p>I learn fastest by putting something real in front of people, noticing what gets in the way and improving it.</p></article>
+					</div>
+				</div>
+			</section>
+
+			<section class="elsewhere" aria-labelledby="elsewhere-title">
+				<div class="shell elsewhere-grid">
+					<p class="eyebrow">Away from the keyboard</p>
+					<div class="elsewhere-copy">
+						<h2 id="elsewhere-title">Usually moving,<br />occasionally tinkering.</h2>
+						<p>Running clears my head. Squash keeps me honest. The rest of the time, I’m often disappearing down an entirely unnecessary technology rabbit hole—usually involving the homelab, a new tool or a question that started with “I wonder if…”</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="closing shell">
+				<p class="eyebrow">Selected work</p>
+				<h2>See what I’ve<br />been building.</h2>
+				<div class="project-links"><a href="/work/ardu/">Ardu <span aria-hidden="true">→</span></a><a href="/work/squashr/">Squashr <span aria-hidden="true">→</span></a></div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="shell footer-inner">
+				<p class="eyebrow">Get in touch</p>
+				<a class="footer-cta" href="mailto:hello@mulveywatters.ie">Let’s make<br />something useful.</a>
+				<div class="footer-meta"><a href="mailto:hello@mulveywatters.ie">hello@mulveywatters.ie</a><span>Dublin, Ireland</span><span>© {year} Steven Mulvey Watters</span></div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root { --paper:#f3f0e8; --ink:#11120f; --muted:#5e5d56; --green:#064c34; --rule:rgba(17,18,15,.25); font-family:'DM Sans',system-ui,sans-serif; color:var(--ink); background:var(--paper); font-synthesis:none; }
+	* { box-sizing:border-box; }
+	html { scroll-behavior:smooth; overflow-x:clip; }
+	body { margin:0; background:var(--paper); overflow-x:clip; }
+	a { color:inherit; text-decoration:none; transition:opacity .2s ease; }
+	a:hover { opacity:.65; }
+	a:focus-visible { outline:2px solid currentColor; outline-offset:5px; }
+	.skip-link { position:fixed; z-index:100; top:1rem; left:1rem; padding:.7rem 1rem; color:#fff; background:#11120f; border-radius:.25rem; transform:translateY(-200%); }
+	.skip-link:focus { transform:none; }
+	.shell { width:min(100% - 2rem,1180px); margin-inline:auto; }
+	.site-header { display:flex; align-items:center; justify-content:space-between; padding-block:1.35rem; border-bottom:1px solid var(--rule); }
+	.wordmark, nav a, .eyebrow { font-size:.72rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+	nav { display:flex; gap:1.25rem; }
+	nav a { letter-spacing:.04em; text-transform:none; }
+	nav a[aria-current="page"] { padding-bottom:.25rem; border-bottom:1px solid currentColor; }
+	h1, h2, h3, .footer-cta { font-family:'Instrument Serif',Georgia,serif; font-weight:400; }
+	.eyebrow { margin:0; color:var(--muted); }
+	.about-hero { min-height:45rem; padding-block:5rem 4rem; display:flex; flex-direction:column; align-items:flex-start; }
+	.about-hero .eyebrow { margin-bottom:1.5rem; }
+	h1 { margin:0; max-width:10em; font-size:clamp(4rem,16vw,7.6rem); line-height:.86; letter-spacing:-.045em; }
+	h1 em { font-weight:400; }
+	.hero-intro { width:100%; margin-top:auto; padding-top:3rem; }
+	.hero-intro p { max-width:36rem; margin:0; font-size:1.08rem; line-height:1.6; }
+	.text-link { display:inline-block; margin-top:2rem; padding-bottom:.28rem; border-bottom:1px solid currentColor; font-weight:500; }
+	.work-story { background:#dfeae3; }
+	.story-grid { padding-block:5.5rem; }
+	.story-grid > .eyebrow { margin-bottom:1.5rem; }
+	.story-copy > h2, .principles h2, .elsewhere h2, .closing h2 { margin:0; font-size:clamp(3.2rem,11vw,5.5rem); line-height:.92; letter-spacing:-.03em; }
+	.story-copy > h2 { max-width:9em; }
+	.story-pair { margin-top:4rem; border-top:1px solid var(--rule); }
+	.story-pair article { padding-block:2rem; border-bottom:1px solid var(--rule); }
+	.number, .principle-list span { margin:0 0 2.5rem; color:var(--muted); font-size:.7rem; letter-spacing:.1em; }
+	.story-pair h3, .principle-list h3 { margin:0; font-size:2.2rem; line-height:1; }
+	.story-pair article > p:last-child, .principle-list p { margin:1.2rem 0 0; max-width:34rem; line-height:1.65; }
+	.principles { color:#f4f1e9; background:#101310; }
+	.principles .shell { padding-block:5.5rem; }
+	.principles .eyebrow { margin-bottom:1.5rem; color:#aeb0aa; }
+	.principles h2 { max-width:8em; }
+	.principle-list { margin-top:4rem; }
+	.principle-list article { padding-block:2rem; border-top:1px solid #555a53; }
+	.principle-list span { display:block; color:#aeb0aa; }
+	.principle-list p { color:#c7cac3; }
+	.elsewhere { color:#fff; background:var(--green); }
+	.elsewhere-grid { min-height:42rem; padding-block:5.5rem; display:flex; flex-direction:column; }
+	.elsewhere .eyebrow { margin-bottom:2rem; color:rgba(255,255,255,.65); }
+	.elsewhere h2 { max-width:9em; }
+	.elsewhere-copy p { max-width:39rem; margin:2rem 0 0; color:rgba(255,255,255,.82); font-size:1.05rem; line-height:1.65; }
+	.closing { padding-block:6rem; }
+	.closing .eyebrow { margin-bottom:1.5rem; }
+	.closing h2 { max-width:10em; }
+	.project-links { display:flex; flex-wrap:wrap; gap:2rem; margin-top:3rem; }
+	.project-links a { padding-bottom:.3rem; border-bottom:1px solid currentColor; font-weight:500; }
+	.footer { color:#f5f1e8; background:#101310; }
+	.footer-inner { padding-block:4rem 2rem; }
+	.footer .eyebrow { margin-bottom:2rem; color:#abaea7; }
+	.footer-cta { display:block; padding-bottom:2.5rem; border-bottom:1px solid #74776f; font-size:clamp(3.7rem,15vw,7.5rem); line-height:.82; letter-spacing:-.035em; }
+	.footer-meta { display:grid; gap:.7rem; padding-top:1.75rem; color:#bdc0b9; font-size:.78rem; }
+	@media (min-width:960px) {
+		.shell { width:min(100% - 5rem,1180px); }
+		.site-header { padding-block:1.7rem; }
+		.about-hero { min-height:48rem; padding-block:6rem 4.5rem; display:grid; grid-template-columns:1.1fr .9fr; grid-template-rows:auto 1fr; column-gap:5rem; }
+		.about-hero .eyebrow { grid-column:1 / -1; }
+		.about-hero h1 { grid-column:1 / -1; grid-row:2; align-self:start; font-size:clamp(6rem,8.2vw,8.8rem); }
+		.hero-intro { grid-column:2; grid-row:2; align-self:end; padding:0 0 .5rem; }
+		.hero-intro p { font-size:1.2rem; }
+		.story-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; padding-block:8rem; }
+		.story-grid > .eyebrow { margin-top:.45rem; }
+		.story-copy { grid-column:2; }
+		.story-pair { margin-top:5rem; }
+		.principles .shell { padding-block:8rem; }
+		.principle-list { display:grid; grid-template-columns:repeat(3,1fr); gap:2.5rem; margin-top:5rem; }
+		.principle-list article { min-height:20rem; display:flex; flex-direction:column; }
+		.principle-list p { margin-top:auto; }
+		.elsewhere-grid { min-height:48rem; padding-block:8rem; display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+		.elsewhere .eyebrow { align-self:start; margin-top:.45rem; }
+		.elsewhere-copy { grid-column:2; }
+		.elsewhere-copy p { margin-top:2.5rem; font-size:1.15rem; }
+		.closing { padding-block:9rem; }
+		.footer-inner { padding-block:6rem 2.5rem; }
+		.footer-meta { grid-template-columns:1fr 1fr auto; }
+	}
+	@media (prefers-reduced-motion:no-preference) {
+		@keyframes reveal { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+		.about-hero > * { animation:reveal .65s ease both; }
+		.about-hero > :nth-child(2) { animation-delay:.08s; }
+		.about-hero > :nth-child(3) { animation-delay:.16s; }
+	}
+	@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+</style>

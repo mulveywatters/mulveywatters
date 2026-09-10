@@ -1,22 +1,19 @@
 ---
+import SiteHead from '../components/SiteHead.astro';
+import SiteBrand from '../components/SiteBrand.astro';
 const year = new Date().getFullYear();
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Steven Mulvey Watters builds thoughtful, privacy-focused apps and practical web tools in Dublin." />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Steven Mulvey Watters — Independent developer</title>
+		<SiteHead title="Steven Mulvey Watters — Independent developer" description="Steven Mulvey Watters builds thoughtful, privacy-focused apps and practical web tools in Dublin." path="/" />
 	</head>
 	<body>
+		<a class="skip-link" href="#top">Skip to main content</a>
 		<header class="site-header shell">
-			<a class="wordmark" href="#top" aria-label="Steven Mulvey Watters, home">Steven Mulvey Watters</a>
-			<nav aria-label="Primary navigation"><a href="#work">Work</a><a href="#about">About</a></nav>
+			<SiteBrand href="#top" />
+			<nav aria-label="Primary navigation"><a href="#work">Work</a><a href="/about/">About</a></nav>
 		</header>
 
 		<main id="top">
@@ -39,7 +36,7 @@ const year = new Date().getFullYear();
 						<a class="project-link" href="/work/ardu/">Explore Ardu <span aria-hidden="true">→</span></a>
 					</div>
 					<div class="product-stage ardu-stage">
-						<img src="/images/ardu-today.png" alt="Ardu Today screen showing a focused plan and a calm list of later tasks" loading="eager" />
+						<img src="/images/ardu-today.png" alt="Ardu Today screen showing a focused plan and a calm list of later tasks" loading="eager" fetchpriority="high" />
 					</div>
 				</div>
 			</section>
@@ -54,7 +51,7 @@ const year = new Date().getFullYear();
 						<a class="project-link" href="/work/squashr/">Explore Squashr <span aria-hidden="true">→</span></a>
 					</div>
 					<div class="product-stage squashr-stage">
-						<img src="/images/squashr-live-scoring-iphone.jpg" alt="Squashr live scoring on iPhone during game two, with Bob King on four points and John Doe serving on six" loading="lazy" />
+						<img src="/images/squashr-live-scoring-iphone.jpg" alt="Squashr live scoring on iPhone during game two, with Bob King on four points and John Doe serving on six" loading="lazy" decoding="async" />
 					</div>
 				</div>
 			</section>
@@ -65,6 +62,7 @@ const year = new Date().getFullYear();
 					<h2 id="about-title">Useful technology should feel human.</h2>
 					<p>I’m Steven, a Configuration Analyst and independent developer based in Dublin. I enjoy solving practical problems, making complicated systems calmer and learning by building.</p>
 					<p>Away from the keyboard, you’ll usually find me running, playing squash or disappearing down an entirely unnecessary technology rabbit hole.</p>
+					<a class="about-link" href="/about/">More about me <span aria-hidden="true">→</span></a>
 				</div>
 			</section>
 		</main>
@@ -80,7 +78,6 @@ const year = new Date().getFullYear();
 </html>
 
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
 	:root { --paper:#f3f0e8; --ink:#11120f; --muted:#5e5d56; --ardu:#0868d7; --squashr:#064c34; --rule:rgba(17,18,15,.25); font-family:'DM Sans',system-ui,sans-serif; color:var(--ink); background:var(--paper); font-synthesis:none; }
 	* { box-sizing:border-box; }
 	html { scroll-behavior:smooth; }
@@ -88,6 +85,8 @@ const year = new Date().getFullYear();
 	a { color:inherit; text-decoration:none; transition:opacity .2s ease; }
 	a:hover { opacity:.65; }
 	a:focus-visible { outline:2px solid currentColor; outline-offset:5px; }
+	.skip-link { position:fixed; z-index:100; top:1rem; left:1rem; padding:.7rem 1rem; color:#fff; background:#11120f; border-radius:.25rem; transform:translateY(-200%); }
+	.skip-link:focus { transform:none; }
 	img { display:block; max-width:100%; }
 	.shell { width:min(100% - 2rem,1180px); margin-inline:auto; }
 	.site-header { display:flex; align-items:center; justify-content:space-between; padding-block:1.35rem; border-bottom:1px solid var(--rule); }
@@ -120,6 +119,7 @@ const year = new Date().getFullYear();
 	.about .eyebrow { margin:0 0 1.2rem; color:var(--muted); }
 	.about h2 { margin:0 0 1.4rem; max-width:11em; font-size:2.65rem; line-height:.98; }
 	.about-copy > p:not(.eyebrow) { max-width:39rem; line-height:1.6; }
+	.about-link { display:inline-block; margin-top:1.4rem; padding-bottom:.28rem; border-bottom:1px solid currentColor; font-weight:500; }
 	.footer { background:#101310; color:#f5f1e8; }
 	.footer-inner { padding-block:4rem 2rem; }
 	.footer .eyebrow { margin:0 0 2rem; color:#abaea7; }

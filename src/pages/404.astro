@@ -1,0 +1,68 @@
+---
+import SiteHead from '../components/SiteHead.astro';
+import SiteBrand from '../components/SiteBrand.astro';
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<SiteHead title="Page not found — Steven Mulvey Watters" description="That page could not be found. Return to Steven Mulvey Watters’ portfolio or browse the selected work." path="/404/" noIndex={true} />
+	</head>
+	<body>
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+		<header class="site-header shell">
+			<SiteBrand />
+			<nav aria-label="Primary navigation"><a href="/#work">Work</a><a href="/about/">About</a></nav>
+		</header>
+
+		<main id="main-content" class="not-found shell">
+			<p class="eyebrow">404 · Page not found</p>
+			<h1>This page<br /><em>wandered off.</em></h1>
+			<div class="not-found-copy">
+				<p>The useful part is knowing how to get back. Return home or head straight to the work.</p>
+				<div class="actions"><a href="/">Back home <span aria-hidden="true">→</span></a><a href="/#work">View selected work <span aria-hidden="true">→</span></a></div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="shell footer-inner"><a href="mailto:hello@mulveywatters.ie">hello@mulveywatters.ie</a><span>Dublin, Ireland</span><span>© {year} Steven Mulvey Watters</span></div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root { --paper:#f3f0e8; --ink:#11120f; --muted:#5e5d56; --rule:rgba(17,18,15,.25); font-family:'DM Sans',system-ui,sans-serif; color:var(--ink); background:var(--paper); font-synthesis:none; }
+	* { box-sizing:border-box; }
+	body { margin:0; background:var(--paper); }
+	a { color:inherit; text-decoration:none; transition:opacity .2s ease; }
+	a:hover { opacity:.65; }
+	a:focus-visible { outline:2px solid currentColor; outline-offset:5px; }
+	.skip-link { position:fixed; z-index:100; top:1rem; left:1rem; padding:.7rem 1rem; color:#fff; background:#11120f; border-radius:.25rem; transform:translateY(-200%); }
+	.skip-link:focus { transform:none; }
+	.shell { width:min(100% - 2rem,1180px); margin-inline:auto; }
+	.site-header { display:flex; align-items:center; justify-content:space-between; padding-block:1.35rem; border-bottom:1px solid var(--rule); }
+	.wordmark, nav a, .eyebrow { font-size:.72rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+	nav { display:flex; gap:1.25rem; }
+	nav a { letter-spacing:.04em; text-transform:none; }
+	.not-found { min-height:calc(100vh - 11rem); padding-block:5rem; display:flex; flex-direction:column; }
+	.eyebrow { margin:0 0 1.5rem; color:var(--muted); }
+	h1 { margin:0; font-family:'Instrument Serif',Georgia,serif; font-size:clamp(4.4rem,17vw,8.8rem); font-weight:400; line-height:.84; letter-spacing:-.045em; }
+	h1 em { font-weight:400; }
+	.not-found-copy { margin-top:auto; padding-top:4rem; }
+	.not-found-copy p { max-width:32rem; margin:0; font-size:1.08rem; line-height:1.6; }
+	.actions { display:flex; flex-wrap:wrap; gap:2rem; margin-top:2rem; }
+	.actions a { padding-bottom:.28rem; border-bottom:1px solid currentColor; font-weight:500; }
+	.footer { color:#bdc0b9; background:#101310; }
+	.footer-inner { display:grid; gap:.7rem; padding-block:2rem; font-size:.78rem; }
+	@media (min-width:960px) {
+		.shell { width:min(100% - 5rem,1180px); }
+		.site-header { padding-block:1.7rem; }
+		.not-found { min-height:calc(100vh - 10rem); padding-block:6rem 4.5rem; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto 1fr; gap:0 5rem; }
+		.not-found .eyebrow { grid-column:1 / -1; }
+		h1 { grid-column:1 / -1; grid-row:2; }
+		.not-found-copy { grid-column:2; grid-row:2; align-self:end; padding-bottom:.5rem; }
+		.footer-inner { grid-template-columns:1fr 1fr auto; }
+	}
+	@media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto !important; } }
+</style>

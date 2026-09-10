@@ -1,25 +1,22 @@
 ---
+import SiteHead from '../../components/SiteHead.astro';
+import SiteBrand from '../../components/SiteBrand.astro';
 const year = new Date().getFullYear();
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Ardu is a private, forgiving iPhone app for building habits, moving plans forward and returning gently after a break." />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Ardu — Steven Mulvey Watters</title>
+		<SiteHead title="Ardu — A calmer way to build momentum" description="Ardu is a private, forgiving iPhone app for building habits, moving plans forward and returning gently after a break." path="/work/ardu/" themeColor="#0868d7" />
 	</head>
 	<body>
+		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header class="site-header shell">
-			<a class="wordmark" href="/">Steven Mulvey Watters</a>
-			<nav aria-label="Primary navigation"><a href="/#work">Work</a><a href="/#about">About</a></nav>
+			<SiteBrand />
+			<nav aria-label="Primary navigation"><a href="/#work" aria-current="page">Work</a><a href="/about/">About</a></nav>
 		</header>
 
-		<main>
+		<main id="main-content">
 			<section class="case-hero">
 				<div class="case-hero-inner shell">
 					<div class="hero-copy">
@@ -33,7 +30,7 @@ const year = new Date().getFullYear();
 						</dl>
 					</div>
 					<div class="hero-phone" aria-hidden="true">
-						<img src="/images/ardu-today.png" alt="" />
+						<img src="/images/ardu-today.png" alt="" fetchpriority="high" />
 					</div>
 				</div>
 			</section>
@@ -66,7 +63,7 @@ const year = new Date().getFullYear();
 						<h2 id="capture-title">Begin with the messy thought.</h2>
 						<p>Quick Capture accepts the responsibility as it exists in your head. Ardu helps shape it into a Habit or Plan, but nothing is created until you review it.</p>
 					</div>
-					<figure><img src="/images/ardu/quick-capture.png" alt="Ardu Quick Capture screen turning an unstructured thought into a Habit or Plan" loading="lazy" /></figure>
+					<figure><img src="/images/ardu/quick-capture.webp" alt="Ardu Quick Capture screen turning an unstructured thought into a Habit or Plan" width="1080" height="1350" decoding="async" /></figure>
 				</div>
 			</section>
 
@@ -77,7 +74,7 @@ const year = new Date().getFullYear();
 						<h2 id="small-title">Make the action fit the day.</h2>
 						<p>Habits can have Full and Minimum versions. Plans move forward one achievable step at a time. The goal is useful movement—not maintaining a perfect record.</p>
 					</div>
-					<figure><img src="/images/ardu/smaller-still-counts.png" alt="Ardu habit check-in offering Full, Minimum and Skip options" loading="lazy" /></figure>
+					<figure><img src="/images/ardu/smaller-still-counts.webp" alt="Ardu habit check-in offering Full, Minimum and Skip options" width="1080" height="1350" decoding="async" /></figure>
 				</div>
 			</section>
 
@@ -86,8 +83,8 @@ const year = new Date().getFullYear();
 				<div class="section-copy">
 					<h2 id="ways-title">Two ways to move forward.</h2>
 					<p><strong>Habits</strong> support the things worth repeating. <strong>Plans</strong> hold the things that need to move forward, one clear step at a time. Today shows what matters now instead of exposing another endless list.</p>
-					<img src="/images/ardu/habits-and-plans.png" alt="Ardu onboarding explaining Habits and Plans" loading="lazy" />
 				</div>
+				<figure class="ways-visual"><img src="/images/ardu/habits-and-plans.png" alt="Ardu onboarding explaining Habits and Plans" /></figure>
 			</section>
 
 			<section class="privacy" aria-labelledby="privacy-title">
@@ -109,7 +106,7 @@ const year = new Date().getFullYear();
 			</section>
 
 			<section class="closing shell">
-				<img class="app-icon" src="/images/ardu/app-icon.png" alt="Ardu app icon" loading="lazy" />
+				<img class="app-icon" src="/images/ardu/app-icon.webp" alt="Ardu app icon" width="1024" height="1024" decoding="async" />
 				<p class="eyebrow">Currently in private beta</p>
 				<h2>Useful when you begin.<br />Still useful when you come back.</h2>
 				<a href="mailto:hello@mulveywatters.ie?subject=Ardu">Ask me about Ardu <span aria-hidden="true">→</span></a>
@@ -126,7 +123,6 @@ const year = new Date().getFullYear();
 </html>
 
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
 	:root { --paper:#f3f0e8; --ink:#11120f; --muted:#626159; --blue:#0868d7; --night:#071126; --rule:rgba(17,18,15,.22); font-family:'DM Sans',system-ui,sans-serif; color:var(--ink); background:var(--paper); font-synthesis:none; }
 	* { box-sizing:border-box; }
 	html { scroll-behavior:smooth; }
@@ -134,6 +130,9 @@ const year = new Date().getFullYear();
 	a { color:inherit; text-decoration:none; transition:opacity .2s ease; }
 	a:hover { opacity:.68; }
 	a:focus-visible { outline:2px solid currentColor; outline-offset:5px; }
+	.skip-link { position:fixed; z-index:100; top:1rem; left:1rem; padding:.7rem 1rem; color:#fff; background:#11120f; border-radius:.25rem; transform:translateY(-200%); }
+	.skip-link:focus { transform:none; }
+	nav a[aria-current="page"] { padding-bottom:.25rem; border-bottom:1px solid currentColor; }
 	img { display:block; max-width:100%; }
 	.shell { width:min(100% - 2rem,1180px); margin-inline:auto; }
 	.site-header { display:flex; align-items:center; justify-content:space-between; padding-block:1.35rem; border-bottom:1px solid var(--rule); }
@@ -176,7 +175,8 @@ const year = new Date().getFullYear();
 	.feature-copy > p:last-child { max-width:35rem; font-size:1.05rem; line-height:1.6; color:rgba(255,255,255,.78); }
 	.feature figure { height:34rem; margin:3rem -1rem 0; overflow:hidden; }
 	.feature figure img { width:100%; height:100%; object-fit:cover; object-position:50% 32%; }
-	.two-ways .section-copy > img { margin-top:3rem; border-radius:1.5rem; }
+	.ways-visual { margin:3rem 0 0; overflow:hidden; border-radius:1.5rem; }
+	.ways-visual img { width:100%; }
 	.privacy { background:#101310; color:#f4f1e9; }
 	.privacy-inner { padding-block:5.5rem; }
 	.privacy .eyebrow { margin-bottom:1.5rem; color:#aeb0aa; }
@@ -214,14 +214,20 @@ const year = new Date().getFullYear();
 		.principle-list { display:grid; grid-template-columns:repeat(3,1fr); gap:2.5rem; margin-top:5rem; }
 		.principle-list article { min-height:17rem; display:flex; flex-direction:column; }
 		.principle-list p { margin-top:auto; }
-		.feature-inner { min-height:54rem; padding-top:0; display:grid; grid-template-columns:.8fr 1.2fr; gap:5rem; align-items:center; }
+		.feature-inner { min-height:54rem; padding-top:0; display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
 		.feature-small .feature-copy { order:2; }
 		.feature-copy > p:last-child { font-size:1.12rem; }
-		.feature figure { height:54rem; margin:0; overflow:visible; align-self:end; }
-		.feature figure img { width:100%; height:auto; max-height:none; object-fit:initial; }
-		.feature-capture figure img { transform:translateY(3.5rem); }
-		.feature-small figure img { transform:translateY(3.5rem); }
-		.two-ways .section-copy > img { border-radius:2rem; }
+		.feature figure { margin:0; overflow:hidden; align-self:center; justify-self:center; background:transparent; box-shadow:0 2rem 5rem rgba(0,0,0,.24); }
+		.feature figure img { max-width:none; height:auto; }
+		.feature-capture figure { width:22rem; height:46.1rem; border-radius:3.75rem; }
+		.feature-capture figure img { width:216%; transform:translate(-47.7%,-6.6rem); }
+		.feature-small figure { width:21.7rem; height:48.3rem; border-radius:3.75rem; }
+		.feature-small figure img { width:215%; transform:translate(-47.5%,-4.8rem); }
+		.two-ways { grid-template-rows:auto; align-items:center; }
+		.two-ways > .eyebrow { grid-column:1; grid-row:1; align-self:start; }
+		.two-ways .section-copy { grid-column:2; grid-row:1; align-self:center; }
+		.ways-visual { grid-column:1; grid-row:1; height:29rem; margin:4rem 0 0; border-radius:2rem; }
+		.ways-visual img { width:175%; max-width:none; height:auto; transform:translate(-21.5%,-37%); }
 		.privacy-inner { display:grid; grid-template-columns:1fr 1fr; gap:5rem; padding-block:8rem; }
 		.privacy-copy { margin-top:0; }
 		.closing { padding-block:9rem; }

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 256" role="img" aria-labelledby="title desc">
+  <title id="title">Squashr</title>
+  <desc id="desc">Squashr logo with a squash court and dotted ball trajectory.</desc>
+  <g>
+    <g fill="none" stroke="#0F172A" stroke-linecap="round" stroke-linejoin="round" stroke-width="12">
+      <path d="M44 184V36h168v148"/>
+      <path d="M28 196h200"/>
+      <path d="M128 196v28"/>
+    </g>
+    <path d="M58 106L118 166L184 96" fill="none" stroke="#2563EB" stroke-dasharray="1 20" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+    <circle cx="194" cy="85" r="17" fill="#2563EB"/>
+  </g>
+  <text x="276" y="166" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="112" font-weight="750" letter-spacing="-6">Squashr</text>
+</svg>

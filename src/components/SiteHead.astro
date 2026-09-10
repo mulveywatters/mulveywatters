@@ -1,0 +1,55 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	path?: string;
+	themeColor?: string;
+	noIndex?: boolean;
+}
+
+const {
+	title,
+	description,
+	path = '/',
+	themeColor = '#f3f0e8',
+	noIndex = false,
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://mulveywatters.ie');
+const canonical = new URL(path, site);
+const socialImage = new URL('/images/social-card.jpg', site);
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={description} />
+{noIndex && <meta name="robots" content="noindex, follow" />}
+<meta name="theme-color" content={themeColor} />
+<meta name="generator" content={Astro.generator} />
+<link rel="canonical" href={canonical} />
+<link rel="icon" href="/favicon.ico?v=3" sizes="any" />
+<link rel="icon" type="image/png" href="/favicon-32x32.png?v=3" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-16x16.png?v=3" sizes="16x16" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" sizes="180x180" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Steven Mulvey Watters" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={socialImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Steven Mulvey Watters — I build useful software for real problems." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImage} />
+<meta name="twitter:image:alt" content="Steven Mulvey Watters — I build useful software for real problems." />
+
+<title>{title}</title>
