@@ -7,7 +7,7 @@ const year = new Date().getFullYear();
 <!doctype html>
 <html lang="en">
 	<head>
-		<SiteHead title="Squashr — Tournament management for squash clubs" description="Squashr is a WordPress tournament manager built around the way squash clubs run draws, score matches and keep players informed." path="/work/squashr/" themeColor="#064c34" />
+		<SiteHead title="Squashr — Tournament management for squash clubs" description="Squashr is a tournament platform shaped by a successful live proof of concept at the In4Squash tournament and now in active development." path="/work/squashr/" themeColor="#064c34" />
 	</head>
 	<body>
 		<a class="skip-link" href="#main-content">Skip to main content</a>
@@ -20,13 +20,13 @@ const year = new Date().getFullYear();
 			<section class="case-hero">
 				<div class="case-hero-inner shell">
 					<div class="hero-copy">
-						<p class="eyebrow">Squashr · WordPress plugin</p>
+						<p class="eyebrow">Squashr · Tournament platform</p>
 						<h1>Tournament days,<br /><em>made simpler.</em></h1>
-						<p class="lede">A tournament manager shaped around how squash clubs organise players, run draws, record results and keep everyone moving.</p>
+						<p class="lede">A tournament manager proven at a live In4Squash event and now evolving into a fuller platform for clubs, organisers and players.</p>
 						<dl class="project-meta">
 							<div><dt>Role</dt><dd>Product design & development</dd></div>
 							<div><dt>Built with</dt><dd>WordPress · PHP · MySQL</dd></div>
-							<div><dt>Status</dt><dd>Active development</dd></div>
+							<div><dt>Status</dt><dd>Proof of concept validated · Platform in active development</dd></div>
 						</dl>
 					</div>
 					<div class="hero-visual">
@@ -44,6 +44,17 @@ const year = new Date().getFullYear();
 					<h2 id="day-title">One place from first entry to final result.</h2>
 					<p>Club tournaments often depend on spreadsheets, paper draws and updates spread across several different places. That creates more work precisely when organisers are already busiest.</p>
 					<p>Squashr brings the tournament together inside WordPress: players, divisions, groups, knockout draws, courts, scoring and the public view all share the same source of truth.</p>
+				</div>
+			</section>
+
+			<section class="validation" aria-labelledby="validation-title">
+				<div class="shell validation-inner">
+					<p class="eyebrow">Proven in play</p>
+					<div class="validation-copy">
+						<h2 id="validation-title">From proof of concept to a live tournament.</h2>
+						<p>The Squashr proof of concept ran successfully at the In4Squash tournament, supporting the organiser workflow and giving players a current public view throughout the event. That real-world test validated the core idea and is now informing the full platform.</p>
+						<a href="https://in4squash.squashr.app" target="_blank" rel="noreferrer">View the In4Squash tournament <span aria-hidden="true">↗</span></a>
+					</div>
 				</div>
 			</section>
 
@@ -100,17 +111,20 @@ const year = new Date().getFullYear();
 						<h2 id="platform-title">Built where clubs already publish.</h2>
 					</div>
 					<div class="platform-copy">
-						<p>Squashr is a WordPress plugin rather than another disconnected tournament platform. Organisers manage the event in a familiar environment while players get a purpose-built public experience.</p>
-						<ul><li>Multiple divisions and configurable formats</li><li>Automatic round robin and knockout generation</li><li>Responsive public and live-scoring views</li><li>Incremental development with stable behaviour</li></ul>
+						<p>The WordPress proof of concept remains the working reference implementation. The full Squashr platform is now in active development at <a href="https://squashr.app" target="_blank" rel="noreferrer">squashr.app</a>, building on what worked in the live In4Squash tournament.</p>
+						<ul><li>Validated through a real club tournament</li><li>Multiple divisions and configurable formats</li><li>Responsive public and live-scoring views</li><li>A dedicated platform for clubs, organisers and players</li></ul>
 					</div>
 				</div>
 			</section>
 
 			<section class="closing shell">
 				<img class="closing-logo" src="/images/squashr/squashr-logo-horizontal.svg" alt="Squashr" width="168" height="52" />
-				<p class="eyebrow">Currently in active development</p>
+				<p class="eyebrow">Full platform in active development</p>
 				<h2>Less tournament admin.<br />More time for the squash.</h2>
-				<a href="mailto:hello@mulveywatters.ie?subject=Squashr">Ask me about Squashr <span aria-hidden="true">→</span></a>
+				<div class="closing-links">
+					<a href="https://squashr.app" target="_blank" rel="noreferrer">Visit Squashr.app <span aria-hidden="true">↗</span></a>
+					<a href="mailto:hello@mulveywatters.ie?subject=Squashr">Ask me about Squashr <span aria-hidden="true">→</span></a>
+				</div>
 			</section>
 		</main>
 
@@ -157,6 +171,11 @@ const year = new Date().getFullYear();
 	.section-grid > .eyebrow, .principles .eyebrow { margin-bottom:1.5rem; color:var(--muted); }
 	.section-copy h2, .principles h2, .feature h2, .platform h2, .closing h2 { margin:0; font-size:clamp(3.2rem,11vw,5.5rem); line-height:.92; letter-spacing:-.03em; }
 	.section-copy > p { max-width:43rem; font-size:1.05rem; line-height:1.65; }
+	.validation { padding-block:5.5rem; color:#f3f0e8; background:var(--green); }
+	.validation .eyebrow { margin-bottom:1.5rem; color:rgba(255,255,255,.62); }
+	.validation h2 { max-width:10em; margin:0; font-size:clamp(3.2rem,11vw,5.5rem); line-height:.92; letter-spacing:-.03em; }
+	.validation-copy p { max-width:43rem; margin:2rem 0 0; font-size:1.05rem; line-height:1.65; color:rgba(255,255,255,.8); }
+	.validation-copy a, .platform-copy a { display:inline-block; margin-top:2rem; padding-bottom:.3rem; border-bottom:1px solid currentColor; font-weight:500; }
 	.principles { padding-block:5.5rem; border-block:1px solid var(--rule); }
 	.principles h2 { max-width:10em; }
 	.principle-list { margin-top:3.5rem; }
@@ -188,7 +207,8 @@ const year = new Date().getFullYear();
 	.closing-logo { display:block; width:10.5rem; height:auto; margin-bottom:3rem; }
 	.closing .eyebrow { margin-bottom:1.5rem; color:var(--muted); }
 	.closing h2 { max-width:12em; }
-	.closing > a { display:inline-block; margin-top:2.5rem; padding-bottom:.3rem; border-bottom:1px solid currentColor; font-weight:500; }
+	.closing-links { display:flex; flex-wrap:wrap; gap:1rem 2rem; margin-top:2.5rem; }
+	.closing-links a { display:inline-block; padding-bottom:.3rem; border-bottom:1px solid currentColor; font-weight:500; }
 	.footer { color:#f4f1e9; background:#101310; }
 	.footer-inner { padding-block:3rem 2rem; }
 	.back-link { display:inline-block; padding-bottom:.25rem; border-bottom:1px solid #777b74; }
@@ -208,6 +228,8 @@ const year = new Date().getFullYear();
 		.section-grid > .eyebrow { margin-top:.45rem; }
 		.section-copy { grid-column:2; }
 		.section-copy h2, .principles h2, .feature h2, .platform h2, .closing h2 { font-size:clamp(4.7rem,6.2vw,6.8rem); }
+		.validation-inner { display:grid; grid-template-columns:1fr 1fr; gap:5rem; }
+		.validation h2 { font-size:clamp(4.7rem,6.2vw,6.8rem); }
 		.principles { padding-block:8rem; }
 		.principle-list { display:grid; grid-template-columns:repeat(3,1fr); gap:2.5rem; margin-top:5rem; }
 		.principle-list article { min-height:17rem; display:flex; flex-direction:column; }
