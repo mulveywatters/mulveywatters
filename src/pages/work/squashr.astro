@@ -1,13 +1,14 @@
 ---
 import SiteHead from '../../components/SiteHead.astro';
 import SiteBrand from '../../components/SiteBrand.astro';
+import SquashrBrand from '../../components/SquashrBrand.astro';
 const year = new Date().getFullYear();
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<SiteHead title="Squashr — Tournament management for squash clubs" description="Squashr is a tournament platform shaped by a successful live proof of concept at the In4Squash tournament and now in active development." path="/work/squashr/" themeColor="#064c34" />
+		<SiteHead title="Squashr — More squash. Less organising." description="Squashr is a new home for club games and tournaments, with live scoring ready to try while the wider platform is in development." path="/work/squashr/" themeColor="#064c34" />
 	</head>
 	<body>
 		<a class="skip-link" href="#main-content">Skip to main content</a>
@@ -20,19 +21,20 @@ const year = new Date().getFullYear();
 			<section class="case-hero">
 				<div class="case-hero-inner shell">
 					<div class="hero-copy">
-						<p class="eyebrow">Squashr · Tournament platform</p>
-						<h1>Tournament days,<br /><em>made simpler.</em></h1>
-						<p class="lede">A tournament manager proven at a live In4Squash event and now evolving into a fuller platform for clubs, organisers and players.</p>
+						<SquashrBrand className="hero-brand" />
+						<p class="eyebrow">A better tournament day</p>
+						<h1>More squash.<br /><em>Less organising.</em></h1>
+						<p class="lede">From the first draw to the final point. A new home for club games and tournaments, built around the people on court.</p>
 						<dl class="project-meta">
 							<div><dt>Role</dt><dd>Product design & development</dd></div>
-							<div><dt>Built with</dt><dd>WordPress · PHP · MySQL</dd></div>
-							<div><dt>Status</dt><dd>Proof of concept validated · Platform in active development</dd></div>
+							<div><dt>Available now</dt><dd>Standalone live scoring</dd></div>
+							<div><dt>Status</dt><dd>Wider platform in development</dd></div>
 						</dl>
 					</div>
 					<div class="hero-visual">
-						<figure class="safari-frame hero-browser">
-							<div class="safari-toolbar" aria-hidden="true"><span>Safari</span><span>Squashr organiser dashboard</span></div>
-							<img src="/images/squashr/organiser-dashboard-desktop.jpg" alt="Squashr organiser dashboard showing tournament progress, players, matches and knockout completion" width="1280" height="819" decoding="async" fetchpriority="high" />
+						<figure class="scorer-preview">
+							<img src="/images/squashr/live-scorer.jpg" alt="Squashr live scorer showing a demonstration match between Avery and Blair, with Blair serving at six points to four" width="390" height="578" decoding="async" fetchpriority="high" />
+							<figcaption>The live scorer, ready to try today. Demonstration match shown.</figcaption>
 						</figure>
 					</div>
 				</div>
@@ -41,9 +43,9 @@ const year = new Date().getFullYear();
 			<section class="manifesto shell section-grid" aria-labelledby="day-title">
 				<p class="eyebrow">The idea</p>
 				<div class="section-copy">
-					<h2 id="day-title">One place from first entry to final result.</h2>
+					<h2 id="day-title">Built around the people on court.</h2>
 					<p>Club tournaments often depend on spreadsheets, paper draws and updates spread across several different places. That creates more work precisely when organisers are already busiest.</p>
-					<p>Squashr brings the tournament together inside WordPress: players, divisions, groups, knockout draws, courts, scoring and the public view all share the same source of truth.</p>
+					<p>Squashr is bringing players, boxes, draws, court queues, scoring, results and standings into one clearer experience—without asking clubs to abandon the tools that already work for them.</p>
 				</div>
 			</section>
 
@@ -63,9 +65,9 @@ const year = new Date().getFullYear();
 					<p class="eyebrow">Product principles</p>
 					<h2 id="principles-title">Built around tournament day.</h2>
 					<div class="principle-list">
-						<article><span>01</span><h3>Clear for organisers</h3><p>Keep setup, players, draws, matches and courts together in one tournament workspace.</p></article>
-						<article><span>02</span><h3>Simple at court-side</h3><p>Give scorers a focused mobile view with the current game, server and result history.</p></article>
-						<article><span>03</span><h3>Visible to players</h3><p>Publish draws, matches, court views and results without requiring a WordPress login.</p></article>
+						<article><span>01</span><h3>Run the day</h3><p>Players, boxes, draws and court queues in one organiser workspace.</p></article>
+						<article><span>02</span><h3>Follow every point</h3><p>Clear scoring, results and standings, built for phones at courtside.</p></article>
+						<article><span>03</span><h3>Fit your club</h3><p>Use the tools your club already uses. Squashr makes the actual squash easier to run.</p></article>
 					</div>
 				</div>
 			</section>
@@ -86,9 +88,10 @@ const year = new Date().getFullYear();
 					<div class="feature-copy">
 						<p class="eyebrow">Live at court-side</p>
 						<h2 id="live-title">The match, clearly in hand.</h2>
-						<p>The mobile scoring view keeps player names beside every score, makes the server unmistakable and preserves completed games and rally history as the match unfolds.</p>
+						<p>The standalone scorer is free to try without an account. It keeps the score, server and game state clear at courtside, while scores stay on the device.</p>
+						<a class="feature-link" href="https://score.squashr.app" target="_blank" rel="noreferrer">Try live scoring <span aria-hidden="true">↗</span></a>
 					</div>
-					<figure class="iphone-frame live-scoring-phone"><img src="/images/squashr/live-scoring-mobile.jpg" alt="Squashr live scoring during a match, with player names, current score, server and completed game" width="590" height="1280" decoding="async" /></figure>
+					<figure class="iphone-frame live-scoring-phone"><img src="/images/squashr/live-scorer.jpg" alt="Squashr live scorer showing a demonstration match between Avery and Blair, with Blair serving at six points to four" width="390" height="578" decoding="async" /></figure>
 				</div>
 			</section>
 
@@ -111,18 +114,19 @@ const year = new Date().getFullYear();
 						<h2 id="platform-title">Built where clubs already publish.</h2>
 					</div>
 					<div class="platform-copy">
-						<p>The WordPress proof of concept remains the working reference implementation. The full Squashr platform is now in active development at <a href="https://squashr.app" target="_blank" rel="noreferrer">squashr.app</a>, building on what worked in the live In4Squash tournament.</p>
-						<ul><li>Validated through a real club tournament</li><li>Multiple divisions and configurable formats</li><li>Responsive public and live-scoring views</li><li>A dedicated platform for clubs, organisers and players</li></ul>
+						<p>The wider platform is in development at <a href="https://squashr.app" target="_blank" rel="noreferrer">squashr.app</a>. Real club tournament experience is shaping the next Squashr, while the successful In4Squash proof of concept remains available as the working reference.</p>
+						<ul><li>Standalone live scoring available now</li><li>Players, boxes, draws and court queues</li><li>Results and standings built for phones</li><li>A dedicated platform shaped by real club play</li></ul>
 					</div>
 				</div>
 			</section>
 
 			<section class="closing shell">
-				<img class="closing-logo" src="/images/squashr/squashr-logo-horizontal.svg" alt="Squashr" width="168" height="52" />
-				<p class="eyebrow">Full platform in active development</p>
-				<h2>Less tournament admin.<br />More time for the squash.</h2>
+				<SquashrBrand className="closing-brand" />
+				<p class="eyebrow">The wider platform is in development</p>
+				<h2>More squash.<br />Less organising.</h2>
 				<div class="closing-links">
 					<a href="https://squashr.app" target="_blank" rel="noreferrer">Visit Squashr.app <span aria-hidden="true">↗</span></a>
+					<a href="https://score.squashr.app" target="_blank" rel="noreferrer">Try live scoring <span aria-hidden="true">↗</span></a>
 					<a href="mailto:hello@mulveywatters.ie?subject=Squashr">Ask me about Squashr <span aria-hidden="true">→</span></a>
 				</div>
 			</section>
@@ -153,6 +157,7 @@ const year = new Date().getFullYear();
 	.case-hero { color:#fff; background:var(--green); overflow:hidden; }
 	.case-hero-inner { min-height:50rem; padding-top:4.5rem; display:flex; flex-direction:column; }
 	.hero-copy { position:relative; z-index:2; }
+	.hero-brand { --squashr-brand-size:3rem; margin-bottom:2rem; color:#fff; }
 	.hero-copy .eyebrow { margin-bottom:2rem; }
 	h1 { max-width:9em; margin:0; font-size:clamp(4.2rem,17vw,7.6rem); line-height:.84; letter-spacing:-.045em; }
 	h1 em { font-weight:400; }
@@ -166,7 +171,9 @@ const year = new Date().getFullYear();
 	.safari-toolbar { height:2.65rem; display:grid; grid-template-columns:auto 1fr; align-items:center; gap:1rem; padding:0 .9rem; color:#394047; background:#ececee; border-bottom:1px solid #c8c9cb; font-size:.64rem; font-weight:600; }
 	.safari-toolbar span:last-child { min-width:0; padding:.48rem .85rem; overflow:hidden; color:#62676c; background:#fff; border:1px solid #d2d3d5; border-radius:.55rem; text-align:center; text-overflow:ellipsis; white-space:nowrap; }
 	.safari-frame img { display:block; width:100%; height:auto; }
-	.hero-browser { width:43rem; margin-left:2rem; }
+	.scorer-preview { width:min(21rem,80vw); margin:0 auto; }
+	.scorer-preview img { display:block; width:100%; height:auto; border:1px solid rgba(255,255,255,.18); border-radius:1.35rem; box-shadow:0 2rem 6rem rgba(0,0,0,.34); }
+	.scorer-preview figcaption { max-width:18rem; margin:1rem auto 0; color:rgba(255,255,255,.65); font-size:.72rem; line-height:1.5; text-align:center; }
 	.section-grid { padding-block:5.5rem; }
 	.section-grid > .eyebrow, .principles .eyebrow { margin-bottom:1.5rem; color:var(--muted); }
 	.section-copy h2, .principles h2, .feature h2, .platform h2, .closing h2 { margin:0; font-size:clamp(3.2rem,11vw,5.5rem); line-height:.92; letter-spacing:-.03em; }
@@ -189,7 +196,8 @@ const year = new Date().getFullYear();
 	.feature-inner { padding:4.5rem 0; }
 	.feature-copy .eyebrow { margin-bottom:1.5rem; color:rgba(255,255,255,.62); }
 	.feature h2 { max-width:8em; }
-	.feature-copy > p:last-child { max-width:35rem; font-size:1.05rem; line-height:1.6; color:rgba(255,255,255,.78); }
+	.feature-copy > p:last-of-type { max-width:35rem; font-size:1.05rem; line-height:1.6; color:rgba(255,255,255,.78); }
+	.feature-link { display:inline-block; margin-top:1.35rem; padding-bottom:.3rem; border-bottom:1px solid currentColor; font-weight:500; }
 	.iphone-frame { margin:3rem auto -4.5rem; overflow:hidden; background:#050607; border:.62rem solid #090a0b; border-radius:3.45rem 3.45rem 0 0; box-shadow:0 2rem 5rem rgba(0,0,0,.34), inset 0 0 0 1px #4a4d50; }
 	.iphone-frame img { display:block; width:100%; height:auto; }
 	.match-browser-phone { width:19rem; max-height:36rem; }
@@ -204,7 +212,7 @@ const year = new Date().getFullYear();
 	.platform-copy ul { list-style:none; margin:2rem 0 0; padding:0; border-top:1px solid #555a53; }
 	.platform-copy li { padding:1rem 0; border-bottom:1px solid #555a53; }
 	.closing { padding-block:6rem; }
-	.closing-logo { display:block; width:10.5rem; height:auto; margin-bottom:3rem; }
+	.closing-brand { --squashr-brand-size:3.2rem; margin-bottom:3rem; color:var(--ink); }
 	.closing .eyebrow { margin-bottom:1.5rem; color:var(--muted); }
 	.closing h2 { max-width:12em; }
 	.closing-links { display:flex; flex-wrap:wrap; gap:1rem 2rem; margin-top:2.5rem; }
@@ -223,7 +231,7 @@ const year = new Date().getFullYear();
 		.project-meta div { display:block; }
 		.project-meta dd { margin-top:.55rem; }
 		.hero-visual { align-self:end; height:40rem; margin:0; overflow:visible; }
-		.hero-browser { margin-top:6rem; margin-left:0; }
+		.scorer-preview { width:23rem; margin-top:1rem; }
 		.section-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; padding-block:8rem; overflow:hidden; }
 		.section-grid > .eyebrow { margin-top:.45rem; }
 		.section-copy { grid-column:2; }
@@ -236,7 +244,7 @@ const year = new Date().getFullYear();
 		.principle-list p { margin-top:auto; }
 		.feature-inner { min-height:54rem; padding:0; display:grid; grid-template-columns:.8fr 1.2fr; gap:5rem; align-items:center; }
 		.feature-live .feature-copy { order:2; }
-		.feature-copy > p:last-child { font-size:1.12rem; }
+		.feature-copy > p:last-of-type { font-size:1.12rem; }
 		.iphone-frame { align-self:end; width:24rem; margin:4rem auto -5rem; }
 		.match-browser-phone { max-height:49rem; }
 		.live-scoring-phone { max-height:50rem; }

@@ -1,6 +1,7 @@
 ---
 import SiteHead from '../components/SiteHead.astro';
 import SiteBrand from '../components/SiteBrand.astro';
+import SquashrBrand from '../components/SquashrBrand.astro';
 const year = new Date().getFullYear();
 ---
 
@@ -26,7 +27,23 @@ const year = new Date().getFullYear();
 				</div>
 			</section>
 
-			<section id="work" class="project project-ardu" aria-labelledby="ardu-title">
+			<section id="work" class="project project-squashr" aria-labelledby="squashr-title">
+				<div class="project-inner shell">
+					<div class="project-copy">
+						<SquashrBrand className="project-brand" />
+						<p class="project-label">A better tournament day</p>
+						<h2 id="squashr-title">More squash.<br />Less organising.</h2>
+						<p>From the first draw to the final point. Squashr is a new home for club games and tournaments, built around the people on court.</p>
+						<ul class="tags" aria-label="Squashr highlights"><li>Live scoring</li><li>Club tournaments</li><li>In development</li></ul>
+						<div class="project-actions"><a class="project-link" href="/work/squashr/">Explore Squashr <span aria-hidden="true">→</span></a><a class="project-link" href="https://score.squashr.app" target="_blank" rel="noreferrer">Try live scoring <span aria-hidden="true">↗</span></a></div>
+					</div>
+					<div class="product-stage squashr-stage">
+						<img src="/images/squashr/live-scorer.jpg" alt="Squashr live scorer showing a demonstration match between Avery and Blair, with Blair serving at six points to four" width="390" height="578" loading="eager" fetchpriority="high" />
+					</div>
+				</div>
+			</section>
+
+			<section class="project project-ardu" aria-labelledby="ardu-title">
 				<div class="project-inner shell">
 					<div class="project-copy">
 						<p class="project-label">Ardu</p>
@@ -36,22 +53,7 @@ const year = new Date().getFullYear();
 						<a class="project-link" href="/work/ardu/">Explore Ardu <span aria-hidden="true">→</span></a>
 					</div>
 					<div class="product-stage ardu-stage">
-						<img src="/images/ardu-today.png" alt="Ardu Today screen showing a focused plan and a calm list of later tasks" loading="eager" fetchpriority="high" />
-					</div>
-				</div>
-			</section>
-
-			<section class="project project-squashr" aria-labelledby="squashr-title">
-				<div class="project-inner shell">
-					<div class="project-copy">
-						<p class="project-label">Squashr</p>
-						<h2 id="squashr-title">Tournament days, made simpler.</h2>
-						<p>A tournament platform shaped by a successful proof of concept at the In4Squash tournament, now being developed into a fuller club platform.</p>
-						<ul class="tags" aria-label="Squashr technologies"><li>Live proof of concept</li><li>WordPress</li><li>Active development</li></ul>
-						<a class="project-link" href="/work/squashr/">Explore Squashr <span aria-hidden="true">→</span></a>
-					</div>
-					<div class="product-stage squashr-stage">
-						<img src="/images/squashr-live-scoring-iphone.jpg" alt="Squashr live scoring on iPhone during game two, with Bob King on four points and John Doe serving on six" loading="lazy" decoding="async" />
+						<img src="/images/ardu-today.png" alt="Ardu Today screen showing a focused plan and a calm list of later tasks" loading="lazy" decoding="async" />
 					</div>
 				</div>
 			</section>
@@ -105,12 +107,14 @@ const year = new Date().getFullYear();
 	.project-squashr { background:var(--squashr); }
 	.project-inner { padding-block:3.4rem 0; }
 	.project-copy { position:relative; z-index:2; }
+	.project-brand { --squashr-brand-size:2.3rem; margin-bottom:1.6rem; color:#fff; }
 	.project-label { margin:0 0 2.5rem; padding-bottom:.65rem; border-bottom:1px solid rgba(255,255,255,.7); width:max-content; }
 	.project h2 { max-width:8.5em; margin:0; font-size:clamp(3.15rem,13vw,5.5rem); line-height:.92; letter-spacing:-.03em; }
 	.project-copy > p:not(.project-label) { max-width:34rem; font-size:.98rem; line-height:1.55; margin:1.4rem 0 0; color:rgba(255,255,255,.88); }
 	.tags { display:flex; flex-wrap:wrap; gap:.45rem; list-style:none; padding:0; margin:1.5rem 0 0; }
 	.tags li { border:1px solid rgba(255,255,255,.55); padding:.38rem .62rem; border-radius:.22rem; font-size:.75rem; }
 	.project-link { display:inline-block; margin-top:2rem; }
+	.project-actions { display:flex; flex-wrap:wrap; gap:0 1.5rem; }
 	.product-stage { position:relative; height:27rem; margin:2.75rem -1rem 0; overflow:hidden; }
 	.ardu-stage img { position:absolute; width:19rem; max-width:none; top:0; right:-1rem; border-radius:2.2rem 2.2rem 0 0; box-shadow:0 1.5rem 5rem rgba(0,0,0,.24); }
 	.squashr-stage { height:27rem; margin-right:-1rem; }

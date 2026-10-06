@@ -1,0 +1,31 @@
+---
+interface Props {
+	className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<span class:list={['squashr-brand', className]} aria-label="Squashr">
+	<span aria-hidden="true">squashr</span>
+	<svg class="squashr-ball" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+		<circle cx="20" cy="20" r="18" fill="#202822" />
+		<circle cx="23" cy="15" r="2.4" fill="#f4d53b" />
+		<circle cx="29" cy="21" r="2.4" fill="#f4d53b" />
+	</svg>
+</span>
+
+<style>
+	.squashr-brand {
+		display:inline-flex;
+		align-items:center;
+		gap:.22em;
+		font-family:'DM Sans',system-ui,sans-serif;
+		font-size:var(--squashr-brand-size,2rem);
+		font-weight:800;
+		letter-spacing:-.065em;
+		line-height:1;
+		text-transform:lowercase;
+	}
+	.squashr-ball { width:.82em; height:.82em; flex:none; }
+</style>
